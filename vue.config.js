@@ -13,9 +13,12 @@ module.exports = {
     lintOnSave: process.env.NODE_ENV === 'development',
     // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建。
     productionSourceMap: false,
+    // 反向代理
     devServer: {
         host: '0.0.0.0',
         port: port,
+        open: true, //配置自动启动浏览器  http://172.16.1.12:7071/rest/mcdPhoneBar/
+		hotOnly: true, // 热更新
         proxy: {
             [process.env.VUE_APP_BASE_API]: {
                 target: "http://localhost/",
