@@ -1,4 +1,5 @@
 'use strict'
+const webpack = require("webpack");
 const port = process.env.port || process.env.npm_config_port || 80  // 端口
 
 // vue.config.js
@@ -28,5 +29,17 @@ module.exports = {
                 }
             }
         }
-    }
+    },
+    // 配置插件参数
+	configureWebpack: {
+		plugins: [
+			// 配置 jQuery 插件的参数
+			new webpack.ProvidePlugin({
+				$: 'jquery',
+				jQuery: 'jquery',
+				'window.jQuery': 'jquery',
+				Popper: ['popper.js', 'default']
+			})
+		]
+	}
 }

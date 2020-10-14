@@ -1,0 +1,37 @@
+.index_bg {
+  background-color: #efe1ba;
+}
+
+.container {
+	width: 80%;
+	margin: 5vh auto 0;
+}
+
+@media (min-width: 576px) {
+  .container {
+    margin-top: 10vh;
+  }
+}
+
+.logo {
+  width: 100%;
+  margin-bottom: 10px;
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mian-containter {
+  width: 100%;
+  background-color: rgba(44, 44, 44, 0.5);
+}
