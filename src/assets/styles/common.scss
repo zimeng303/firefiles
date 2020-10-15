@@ -1,5 +1,36 @@
-.index_bg {
-  background-color: #efe1ba;
+/* 设置背景 及 整体的样式 */
+body, html {
+  line-height: 1;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  @include bg_image('../imgs/bg1.jpg');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 1200px) { 
+  body {
+      font-size: $font-size-large;
+  }
+}
+
+@media (max-width: 991px) { 
+  body {
+      font-size: $font-size-medium;
+  }
+}
+
+@media (max-width: 767px) { 
+  body {
+      font-size: $font-size-small;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+      font-size: $font-size-small-s;
+  }
 }
 
 .container {

@@ -1,9 +1,13 @@
 <template>
-  <div id="nav">
+  <div id="header">
+    <div class="logo">
+      <a href="/">
+        <img src="@/assets/imgs/icon.png" />
+      </a>
+    </div>
     <nav class="navbar navbar-expand-md navbar-dark">
       <div class="menulists">
-        <div>
-          <!-- 按钮边框 -->
+        <div class="toggler-icon">
           <button
             class="navbar-toggler"
             type="button"
@@ -30,16 +34,14 @@
         </div>
       </div>
       <div class="handles">
-        <div class="navbar-collapse collapse">
-          <!--右边的登录、注册、搜索功能-->
-          <div class="search">
-            <input type="text" placeholder="回车搜索内容" />
-            <span class="glyphicon glyphicon-search" id="icon_search"></span>
-          </div>
-          <div class="sign">
-            <router-link to="/login">Sign in</router-link>
-            <router-link to="/join" class="join">Sign up</router-link>
-          </div>
+        <!--右边的登录、注册-->
+        <div class="search">
+          <input type="text" placeholder="回车搜索内容" />
+          <span class="glyphicon glyphicon-search" id="icon_search"></span>
+        </div>
+        <div class="sign">
+          <a href="/login">Sign in</a>
+          <a href="/join" class="join">Sign up</a>
         </div>
       </div>
     </nav>
@@ -47,13 +49,12 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-property-decorator";
-import { createNav } from "@/utils/navconfig";
+import { Vue, Component } from "vue-property-decorator";
 
 const menuLists = [
   {
     name: "炫酷首页",
-    path: "/",
+    path: "/home",
   },
   {
     name: "案例展示",
@@ -77,7 +78,8 @@ const menuLists = [
   },
 ];
 
-export default class Nav extends Vue {
+@Component
+export default class Header extends Vue {
   menuLists = menuLists;
 }
 </script>

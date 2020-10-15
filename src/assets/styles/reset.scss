@@ -20,16 +20,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-body, html {
-  line-height: 1;
-  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  @include bg_image('../imgs/bg1.jpg');
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -92,6 +82,20 @@ textarea {
 input::-ms-clear, 
 input::-ms-reveal {
   display: none !important;
+}
+
+/* 修改placeholder默认颜色 */
+input::-webkit-input-placeholder{
+  color: rgba($color: #fff, $alpha: 0.6);
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color: rgba($color: #fff, $alpha: 0.6);
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color: rgba($color: #fff, $alpha: 0.6);
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+  color: rgba($color: #fff, $alpha: 0.6);
 }
 
 /*防止多行文本框拖动*/
